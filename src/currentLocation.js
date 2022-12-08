@@ -3,6 +3,7 @@ import apiKeys from "./apiKeys";
 import Clock from "react-live-clock";
 import loader from "./images/WeatherIcons.gif";
 import ReactAnimatedWeather from "react-animated-weather";
+import Forecast from "./forecast";
 
 
 const dateBuilder = (d) => {
@@ -175,6 +176,7 @@ const Weather = () => {
 					</div>
 				</div>
 			</div>
+			<Forecast icon={icon} weather={main} />
 		</React.Fragment>:
 		<React.Fragment>
 			<img src={loader} style={{ width: "50%", WebkitUserDrag: "none" }} />
